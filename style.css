@@ -6,6 +6,7 @@ body {
     letter-spacing:0px;
     cursor: url('img/cursor1.png'), auto; /* Caminho da imagem convertida */
     display: flex;
+    justify-content: center;
 }
 
 .table-row {
@@ -23,16 +24,26 @@ body {
     height: 255px; /* Altura personalizada */
     border: 2px solid #333; /* Borda */
     border-radius: 11px; /* Bordas arredondadas */
+    position: absolute; /* Remove da estrutura de fluxo normal */
+    top: 30px; /* Distância acima da custom-box, ajuste conforme necessário */
+    left: 120%; /* Posiciona à esquerda */
+    transform: translateX(-50%); /* Ajusta a posição para o centro */
     display: flex; /* Flexbox para centralizar conteúdo */
-    align-items: center; /* Centraliza conteúdo verticalmente */
-    justify-content: center; /* Centraliza conteúdo horizontalmente */
+    justify-content: flex-start; /* Alinha o conteúdo ao topo */
+    align-items: center; /* Centraliza horizontalmente */
+    margin: 0; /* Remove margem */
 }
 
-.custom-box-container {
-    display: flex; /* Exibe os elementos lado a lado */
-    align-items: flex-start; /* Alinha os elementos pelo topo */
-    position: relative; /* Para posicionar os itens corretamente */
+.box-1 {
+    position: relative; /* Permite posicionamento absoluto de filhos */
+    display: flex; /* Alinha os elementos lado a lado */
+    flex-direction: column; /* Organiza o conteúdo na vertical */
+    align-items: center; /* Centraliza horizontalmente */
+    background-color: #fff; /* Cor de fundo */
 }
+
+
+
 
 .custom-box {
     position: relative;
@@ -48,7 +59,7 @@ body {
     flex-direction: column; /* Organiza o conteúdo na vertical */
     justify-content: flex-start; /* Alinha o conteúdo ao topo */
     align-items: center; /* Centraliza horizontalmente */
-    margin: 0 auto; /* Centraliza a caixa na página */
+    margin: 0; /* Remove margem */
     padding: 0; /* Remove padding para a custom-box */
 }
 .title-box {
