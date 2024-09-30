@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Classe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> <!-- Link para o arquivo CSS -->
+</head>
+<body>
+
+    <div class="custom-box">
+        <div class="title-box">
+            <h1><!--Pesquisa--></h1> <!-- Título dentro da nova caixa -->
+        </div>
+        
+        <div class="inner-container">
+            <div class="left-box">
+                <div class="text-box">
+                    <p><!--Classe--></p>
+                </div>
+                <div class="select-container">
+                    <select class="choice-select" id="first-select">
+                        <option value="null">--</option> <!-- Alterado para "null" -->
+                        <option value="1">Guerreiro</option>
+                        <option value="2">Ninja</option>
+                        <option value="3">Sura</option>
+                        <option value="4">Shaman</option>
+                        <option value="5">Lycan</option>
+                    </select>
+                </div>
+                <div class="text-box">
+                    <p><!--Itens--></p>
+                </div>
+                <div class="select-container2">
+                    <select class="choice-select" id="second-select">
+                        <option value="null">--</option> <!-- Alterado para "null" -->
+                        <!-- Opções preenchidas via JavaScript -->
+                    </select>
+                </div>
+                <div class="select-container1">
+                    <select class="choice-select" id="third-select">
+                        <option value="null">--</option> <!-- Alterado para "null" -->
+                        <!-- Opções preenchidas via JavaScript -->
+                    </select>
+                </div>
+                <div class="text-box">
+                    <p><!--Nivel--></p>
+                </div>
+                <div class="select-container">
+                    <div class="select-container1">
+                        <input id="nivelMin" type="number" class="text-input1">
+                        <input id="nivelMax" type="number" class="text-input2">
+                    </div>
+                </div>
+                <div class="text-box">
+                    <p><!--Nivel do Item--></p>
+                </div>
+                <div class="select-container">
+                    <div class="select-container1">
+                        <input id="nivelDoItemMin" type="number" class="text-input8">
+                        <input id="nivelDoItemMax" type="number" class="text-input9">
+                    </div>
+                </div>
+                <div class="text-box">
+                    <p><!--Preço--></p>
+                </div>
+                <div class="select-container">
+                    <div class="select-container1">
+                        <input id="wonMax" type="number" class="text-input3-1" oninput="formatInput(this)" placeholder="0">
+                        <input id="wonMin" type="number" class="text-input3-1" oninput="formatInput(this)" placeholder="0">
+                    </div>
+                    <div class="select-container">
+                        <input id="yangMin" type="text" class="text-input3" maxlength="22" oninput="formatInput(this)" placeholder="0">
+                        <input id="yangMax" type="text" class="text-input4" maxlength="22" oninput="formatInput(this)" placeholder="0">
+                    </div>
+                    <div class="text-box">
+                        <p><!--Nome--></p>
+                    </div>
+                    <div class="select-container">
+                        <input id="nomeFiltro" type="text" class="text-input5">
+                    </div>
+                </div>
+            </div>
+            <div class="inner-box">
+                <div class="box1">
+                    <table id="csv-table">
+                        <tbody>
+                            <!-- Os dados serão inseridos aqui -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="box2">
+                    <!-- Conteúdo da inner-box2 -->
+                    <div class="pagination">
+                        <button class="pagination-button first-page" id="first-page"></button>
+                        <button class="pagination-button prev-page" id="prev-page"></button>
+                        <span id="page-numbers"></span>
+                        <button class="pagination-button next-page" id="next-page"></button>
+                        <button class="pagination-button last-page" id="last-page"></button>
+                    </div>
+                    <!-- Outros elementos da inner-box2 -->
+                </div>
+            </div>
+        </div>
+
+        <div class="button-container">
+            <button class="left-button">Pesquisar</button>
+            <button class="right-button">Comprar</button>
+        </div>
+    </div>
+    
+</body>
+</html>
+
+<!-- *********************************************************** -->
+
+
+
+
+
+<script>
+    function formatInput(input) {
+        let value = input.value.replace(/\D/g, ''); // Remove caracteres não numéricos
+        const maxDigits = input.id.includes('won') ? 6 : 18; // Limitação baseada no campo
+        if (value.length > maxDigits) {
+            value = value.slice(0, maxDigits); // Limita a quantidade de dígitos
+        }
+        value = value.replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.'); // Formatação com ponto
+        input.value = value;
+        setCursorPosition(input);
+    }
+
+    function setCursorPosition(input) {
+        const length = input.value.length;
+        input.setSelectionRange(length, length);
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const firstSelect = document.getElementById('first-select');
+        const secondSelect = document.getElementById('second-select');
+        const thirdSelect = document.getElementById('third-select');
+
+        // Dados para a segunda e terceira caixas de seleção
+        const secondOptions = {
+            1: ['Espada', 'Arma 2 Mãos'],
+            2: ['Espada', 'Adaga', 'Arco', 'Flechas'],
+            3: ['Espada'],
+            4: ['Leque', 'Campainha'],
+            5: ['Garras'],
+            all: ['Montadas | Pets', 'Poções', 'Equipes', 'Joalharia', 'Upgrades', 'Pesca | Minerar', 'Alquimia', 'Disfarces', 'Skills', 'Itens Especiais', 'Outros']
+        };
+
+        const thirdOptions = {
+            'Montadas | Pets': ['1', '2', '3'],
+            'Equipes': ['Armadura', 'Elmo', 'Escudo', 'Luvas'],
+            'Joalharia': ['Pulseira', 'Sapatos', 'Colar', 'Brincos', 'Cinto', 'Talisma'],
+            'Upgrades': ['Upgrade 1', 'Upgrade 2'],
+            'Pesca | Minerar': ['Peixe', 'Mineral'],
+            'Alquimia': ['Diamante', 'Rubi', 'Jade', 'Safira', 'Granada', 'Ónix', 'Ametista', 'Outras'],
+            'Disfarces': ['Disfarce 1', 'Disfarce 2'],
+            'Poções': ['Adaga Curta', 'Adaga de Ouro'],
+            'Skills': ['Skill 1', 'Skill 2'],
+            'Itens Especiais': ['Item Especial 1'],
+            'Outros': ['Outro 1', 'Outro 2'],
+        };
+
+        // Função para atualizar as opções da segunda seleção
+        function updateSecondSelect() {
+            const selectedValue = firstSelect.value;
+            console.log('Atualizando segunda seleção. Valor selecionado:', selectedValue);
+
+            // Limpa as opções da segunda e terceira seleções
+            secondSelect.innerHTML = '<option value="null" selected>--</option>';
+            thirdSelect.innerHTML = '<option value="null" selected>--</option>';
+
+            // Adiciona opções relacionadas à seleção da primeira caixa
+            if (selectedValue !== "null" && selectedValue !== '--' && secondOptions[selectedValue]) {
+                secondOptions[selectedValue].forEach(function (option) {
+                    const newOption = document.createElement('option');
+                    newOption.value = option;
+                    newOption.textContent = option;
+                    secondSelect.appendChild(newOption);
+                });
+                console.log('Opções da segunda seleção atualizadas:', secondSelect.innerHTML);
+            }
+
+            // Adiciona todas as opções sempre
+            secondOptions.all.forEach(function (option) {
+                const newOption = document.createElement('option');
+                newOption.value = option;
+                newOption.textContent = option;
+                secondSelect.appendChild(newOption);
+            });
+        }
+
+        firstSelect.addEventListener('change', updateSecondSelect);
+        // Chama a função uma vez para garantir que as opções da segunda seleção estejam atualizadas ao carregar
+        updateSecondSelect();
+
+        secondSelect.addEventListener('change', function () {
+            const selectedValue = this.value;
+            console.log('Atualizando terceira seleção. Valor selecionado:', selectedValue);
+
+            // Limpa a terceira seleção
+            thirdSelect.innerHTML = '<option value="null" selected>--</option>';
+            if (thirdOptions[selectedValue]) {
+                thirdOptions[selectedValue].forEach(function (option) {
+                    const newOption = document.createElement('option');
+                    newOption.value = option;
+                    newOption.textContent = option;
+                    thirdSelect.appendChild(newOption);
+                });
+                console.log('Opções da terceira seleção atualizadas:', thirdSelect.innerHTML);
+            }
+        });
+
+        document.querySelector('.left-button').addEventListener('click', function () {
+            const classMapping = {
+                '1': 'Guerreiro',
+                '2': 'Ninja',
+                '3': 'Sura',
+                '4': 'Shaman',
+                '5': 'Lican'
+            };
+
+            // Tratamento para quando a seleção for "--" ou "null"
+            const selectedClass = firstSelect.value === "null" || firstSelect.value === '--' ? null : classMapping[firstSelect.value];
+            const selectedSecondClass = secondSelect.value === "null" || secondSelect.value === '--' ? null : secondSelect.value;
+            const selectedThirdClass = thirdSelect.value === "null" || thirdSelect.value === '--' ? null : thirdSelect.value;
+
+            console.log('Classes selecionadas:', {
+                selectedClass,
+                selectedSecondClass,
+                selectedThirdClass
+            });
+
+            // Input de Nome
+            const nomeFiltro = document.getElementById('nomeFiltro').value.trim().toLowerCase();
+            console.log('Filtro de nome:', nomeFiltro);
+
+            // Inputs de Nível Mínimo e Máximo
+            const nivelMin = document.getElementById('nivelMin').value.trim();
+            const nivelMax = document.getElementById('nivelMax').value.trim();
+
+            const minValue = nivelMin ? parseInt(nivelMin) : null; 
+            const maxValue = nivelMax ? parseInt(nivelMax) : null;
+
+            console.log('Níveis Mínimo e Máximo:', { minValue, maxValue });
+
+            // Inputs de Nível do Item Mínimo e Máximo
+            const nivelDoItemMin = document.getElementById('nivelDoItemMin').value.trim();
+            const nivelDoItemMax = document.getElementById('nivelDoItemMax').value.trim();
+
+            const minNivelDoItemValue = nivelDoItemMin ? parseInt(nivelDoItemMin) : null; 
+            const maxNivelDoItemValue = nivelDoItemMax ? parseInt(nivelDoItemMax) : null;
+
+            console.log('Níveis do Item Mínimo e Máximo:', { minNivelDoItemValue, maxNivelDoItemValue });
+
+            // Inputs de Won Mínimo e Máximo
+            const wonMin = document.getElementById('wonMin').value.trim();
+            const wonMax = document.getElementById('wonMax').value.trim();
+
+            const minWonValue = wonMin ? parseInt(wonMin) : null; 
+            const maxWonValue = wonMax ? parseInt(wonMax) : null;
+
+            console.log('Won Mínimo e Máximo:', { minWonValue, maxWonValue });
+
+            // Inputs de Yang Mínimo e Máximo
+            const yangMin = document.getElementById('yangMin').value.trim();
+            const yangMax = document.getElementById('yangMax').value.trim();
+
+            const minYangValue = yangMin ? parseInt(yangMin) : null; 
+            const maxYangValue = yangMax ? parseInt(yangMax) : null;
+
+            console.log('Yang Mínimo e Máximo:', { minYangValue, maxYangValue });
+
+            // Remove a tabela da renderização
+            fetch('db.csv')
+                .then(response => response.text())
+                .then(data => {
+                    let rows = data.split('\n'); // Divide o arquivo CSV em linhas
+                    const filteredItems = []; // Array para armazenar itens filtrados
+                    console.log('Dados carregados do CSV:', rows);
+
+                    rows.slice(1).forEach(row => {
+                        if (row.trim() === '') return; // Ignora linhas vazias
+
+                        let cells = row.split(',').map(cell => cell.trim()); // Divide cada linha em células e remove espaços extras
+
+                        // Verificação condicional para a pesquisa
+                        const matchesFirstClass = selectedClass ? (cells[5] === selectedClass || cells[5] === '-') : true;
+                        const matchesSecondClass = selectedSecondClass ? cells[6] === selectedSecondClass : true;
+                        const matchesThirdClass = selectedThirdClass ? cells[7] === selectedThirdClass : true;
+
+                        const itemLevel = parseInt(cells[8]); // Nível do item
+                        const matchesNivel = (minValue === null || itemLevel >= minValue) && (maxValue === null || itemLevel <= maxValue);
+
+                        const nivelDoItem = parseInt(cells[9]); // Nível do item
+                        const matchesNivelDoItem = (minNivelDoItemValue === null || nivelDoItem >= minNivelDoItemValue) && (maxNivelDoItemValue === null || nivelDoItem <= maxNivelDoItemValue);
+
+                        const wonValue = parseInt(cells[3]); // Won
+                        const matchesWon = (minWonValue === null || wonValue >= minWonValue) && (maxWonValue === null || wonValue <= maxWonValue);
+
+                        const yangValue = parseInt(cells[4]); // Yang
+                        const matchesYang = (minYangValue === null || yangValue >= minYangValue) && (maxYangValue === null || yangValue <= maxYangValue);
+
+                        // Adiciona à lista de itens filtrados se corresponder
+                        if (matchesFirstClass && matchesSecondClass && matchesThirdClass && matchesNivel && matchesNivelDoItem && matchesWon && matchesYang) {
+                            filteredItems.push(cells); // Adiciona a linha filtrada ao array
+                        }
+                    });
+
+                    console.log('Itens filtrados:', filteredItems);
+                    // Atualiza a tabela
+                    updateTable(filteredItems);
+                })
+                .catch(error => {
+                    console.error('Erro ao carregar o CSV:', error);
+                });
+        });
+
+        function updateTable(filteredItems) {
+            const itemsPerPage = 10; // Número de itens por página
+            const totalPages = Math.ceil(filteredItems.length / itemsPerPage);
+            let currentPage = 1; // Página atual
+
+            const tableBody = document.querySelector('#csv-table tbody');
+            if (!tableBody) {
+                console.error('Tabela não encontrada!');
+                return; // Impede a execução se a tabela não estiver disponível
+            }
+
+            tableBody.innerHTML = ''; // Limpa a tabela existente
+
+            function renderTable(page) {
+                tableBody.innerHTML = ''; // Limpa o corpo da tabela
+                const startIndex = (page - 1) * itemsPerPage;
+                const endIndex = startIndex + itemsPerPage;
+                const itemsToDisplay = filteredItems.slice(startIndex, endIndex);
+
+                itemsToDisplay.forEach(item => {
+                    const row = document.createElement('tr');
+                    
+                    // Exibir apenas as 5 colunas desejadas
+                    const columnsToDisplay = [item[0], item[1], item[2], item[3], item[4]]; // [Nome do Item, Data, Quantidade, Won, Classe]
+
+                    columnsToDisplay.forEach(cell => {
+                        const td = document.createElement('td');
+                        td.textContent = cell === 'NaN' ? '-' : cell; // Substitui 'NaN' por '-'
+                        row.appendChild(td);
+                    });
+
+                    tableBody.appendChild(row);
+                });
+
+                // Atualiza a paginação
+                updatePagination();
+                console.log(`Página renderizada: ${page}`);
+            }
+
+            function updatePagination() {
+                const pagination = document.querySelector('.pagination');
+                pagination.innerHTML = '';
+
+                
+                // Botão da primeira página
+                if (currentPage > 1) {
+                    const firstButton = document.createElement('button');
+                    firstButton.classList.add('pagination-button', 'first-page'); // Classes CSS
+                    firstButton.textContent = ''; // Imagem como fundo
+                    firstButton.addEventListener('click', () => {
+                        currentPage = 1;
+                        renderTable(currentPage);
+                    });
+                    pagination.appendChild(firstButton);
+                }
+
+                // Botão da página anterior
+                if (currentPage > 1) {
+                    const prevButton = document.createElement('button');
+                    prevButton.classList.add('pagination-button', 'prev-page'); // Classes CSS
+                    prevButton.textContent = ''; // Imagem como fundo
+                    prevButton.addEventListener('click', () => {
+                        currentPage--;
+                        renderTable(currentPage);
+                    });
+                    pagination.appendChild(prevButton);
+                }
+
+                // Botões de páginas
+                for (let i = 1; i <= totalPages; i++) {
+                    const pageButton = document.createElement('button');
+                    pageButton.classList.add('pagination-button', 'page-number'); // Classes CSS
+                    pageButton.textContent = i; // Adiciona o número da página
+                    if (i === currentPage) {
+                        pageButton.classList.add('current-page'); // Aplica o estilo para a página atual
+                    }
+                    pageButton.addEventListener('click', () => {
+                        currentPage = i;
+                        renderTable(currentPage);
+                    });
+                    pagination.appendChild(pageButton);
+                }
+
+                // Botão da página seguinte
+                if (currentPage < totalPages) {
+                    const nextButton = document.createElement('button');
+                    nextButton.classList.add('pagination-button', 'next-page'); // Classes CSS
+                    nextButton.textContent = ''; // Imagem como fundo
+                    nextButton.addEventListener('click', () => {
+                        currentPage++;
+                        renderTable(currentPage);
+                    });
+                    pagination.appendChild(nextButton);
+                }
+
+                // Botão da última página
+                if (currentPage < totalPages) {
+                    const lastButton = document.createElement('button');
+                    lastButton.classList.add('pagination-button', 'last-page'); // Classes CSS
+                    lastButton.textContent = ''; // Imagem como fundo
+                    lastButton.addEventListener('click', () => {
+                        currentPage = totalPages;
+                        renderTable(currentPage);
+                    });
+                    pagination.appendChild(lastButton);
+                }
+
+            }
+
+            // Renderiza a primeira página
+            renderTable(currentPage);
+        }
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+name: Editar CSV
+
+on:
+  workflow_dispatch:
+    inputs:
+      item_name:
+        description: 'Nome do Item'
+        required: true
+      new_price:
+        description: 'Novo Preço'
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  update_csv:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Atualizar CSV
+        run: |
+          ITEM_NAME="${{ github.event.inputs.item_name }}"
+          NEW_PRICE="${{ github.event.inputs.new_price }}"
+          sed -i "s/${ITEM_NAME},.*/${ITEM_NAME},${NEW_PRICE}/" dbazul.csv
+          
+      - name: Commit changes
+        run: |
+          git config --local user.name "GitHub Actions"
+          git config --local user.email "actions@github.com"
+          git add dbazul.csv
+          git commit -m "Atualizando preço de ${{ github.event.inputs.item_name }} para ${{ github.event.inputs.new_price }}"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

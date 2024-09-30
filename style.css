@@ -1,0 +1,722 @@
+body {
+    font-family: sans-serif; /* Aplica a fonte personalizada */
+    background-color: #313131;
+    margin: 20px;
+    text-align: center;
+    letter-spacing:0px;
+    cursor: url('img/cursor1.png'), auto; /* Caminho da imagem convertida */
+    display: flex;
+}
+
+.table-row {
+    cursor: url('img/cursor2.png'), auto; /* Caminho da imagem convertida */
+}
+
+.table-cell {
+    cursor: text; /* Cursor de texto ao passar sobre células da tabela */
+}
+
+.box-1 {
+    display: flex; /* Organiza as caixas internas na horizontal */
+    width: 100%; /* Usa a largura total da caixa externa */
+    padding: 0; /* Remove qualquer preenchimento do contêiner */
+    margin: 0; /* Remove qualquer margem do contêiner */
+}
+
+
+#edit-area {
+    display: none; /* Inicia oculto */
+    position: absolute; /* Posiciona a div em relação ao pai */
+    top: 10%; /* Alinha ao topo do contêiner */
+    left: 70%; /* Move para a direita da box pai */
+    margin-left: 20px; /* Espaço entre a área de edição e a box */
+    align-items: center;
+    background-image: url('img/editbg.png');
+    width: 255px; /* Largura personalizada */
+    height: 255px; /* Altura personalizada */
+}
+
+.custom-box {
+    position: relative;
+    width: 683px; /* Largura personalizada */
+    height: 363px; /* Altura personalizada */
+    border: 2px solid #333; /* Borda da caixa */
+    border-radius: 11px; /* Bordas arredondadas */
+    background-color: #fff; /* Cor de fundo */
+    background-image: url('img/bg.png'); /* Caminho para a imagem de fundo */
+    background-size: cover; /* A imagem cobre toda a caixa */
+    background-position: center; /* Centraliza a imagem */
+    display: flex;
+    flex-direction: column; /* Organiza o conteúdo na vertical */
+    justify-content: flex-start; /* Alinha o conteúdo ao topo */
+    align-items: center; /* Centraliza horizontalmente */
+    margin: 0 auto; /* Centraliza a caixa na página */
+    padding: 0; /* Remove padding para a custom-box */
+}
+.title-box {
+    width: 680px; /* Largura total da caixa do título */
+    height: 20px; /* Altura da caixa do título */
+    border: 1px solid #44444400; /* Borda da caixa do título */
+    border-radius: 5px; /* Bordas arredondadas da caixa do título */
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    margin-bottom: 10px;
+    font-size: 5px; /* Aumentar o tamanho da fonte */
+	color: white;
+}
+
+.text-box {
+    width: 120px; /* Largura total da caixa de texto */
+    height: 16px;
+    border: 1px solid #00000000; /* Borda da caixa do título */
+    border-radius: 3px; /* Bordas arredondadas da caixa do título */
+    background-size: cover; /* Faz a imagem cobrir toda a caixa */
+    background-position: center; /* Centraliza a imagem */
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: bottom; /* Centraliza verticalmente */
+    font-size: 6px; /* Aumentar o tamanho da fonte */
+    margin-top: 6px;
+    margin-bottom: -2px;
+	color: #ebd3a0;
+}
+
+.inner-container {
+    display: flex; /* Organiza as caixas internas na horizontal */
+    width: 100%; /* Usa a largura total da caixa externa */
+    padding: 0; /* Remove qualquer preenchimento do contêiner */
+    margin: 0; /* Remove qualquer margem do contêiner */
+}
+
+.left-box {
+    width: 117px; /* Largura da caixa à esquerda */
+    height: 295px; /* Altura da caixa à esquerda */
+    display: flex;
+	justify-content: flex-start; /* Centraliza horizontalmente */
+    margin-right: 8px; /* Espaçamento à direita da caixa à esquerda */
+    margin-left: 6px;
+    flex-direction: column; /* Alinha o conteúdo da caixa à esquerda na vertical */
+    align-items: center; /* Centraliza os itens horizontalmente */
+}
+
+.left-box > *:first-child {
+    margin-top: 0; /* Remove a margem superior do primeiro elemento */
+}
+
+.select-container {
+    width: 120px; /* Largura da caixa de seleção */
+    height: 19px; /* Altura da caixa de seleção */
+    margin-bottom: 0px;
+	margin-top: 2px;
+}
+
+.select-container2 {
+    width: 120px; /* Largura da caixa de seleção */
+    height: 19px; /* Altura da caixa de seleção */
+    margin-bottom: 3px;
+	margin-top: -2px;
+}
+
+.select-container1 {
+    width: 120px; /* Largura da caixa de seleção */
+    height: 19px; /* Altura da caixa de seleção */
+    margin-bottom: 0px; /* Espaçamento acima da caixa de seleção */
+    margin-top: -2px;
+}
+
+.choice-select {
+    width: 100%; /* Largura total da caixa de seleção */
+    height: 100%; /* Altura total da caixa de seleção */
+    border: 1px solid #444; /* Borda da caixa de seleção */
+    border-radius: 0px; /* Bordas arredondadas da caixa de seleção */
+    background-color: #5eec00; /* Cor de fundo da caixa do título */
+    background-size: 100% auto; /* Ajusta a imagem para cobrir todo o input */
+    background-position: center; /* Centraliza a imagem */
+    padding: 0px; /* Espaçamento interno da caixa de seleção */
+    font-size: 8px;
+    font-family: sans-serif;
+    letter-spacing: 0px;
+    border: none; /* Remove a borda padrão */
+    color: #d5d5d4; /* Define a cor do texto (opcional) */
+    appearance: none; /* Remove o estilo padrão do select */
+    background-color: transparent; /* Define a cor de fundo como transparente */
+    text-align: center; /* Alinha o texto ao centro */
+    margin-top: 3px;
+    margin-bottom: 0px;
+    width: 95px; /* Largura do select */
+    cursor: url('img/cursor1.png'), auto; /* Caminho da imagem convertida */
+}
+
+/* Estilo para a lista de opções */
+.choice-select option {
+    background-color: black; /* Fundo preto para as opções */
+    color: #d5d5d4; /* Cor do texto das opções */
+    text-align: center; /* Alinha o texto ao centro */
+    cursor: url('img/cursor1.png'), auto; /* Caminho da imagem convertida */
+}
+
+
+[class^="choice-select"] {}
+	
+[class^="choice-select"]:focus {
+    outline: none; /* Remove a borda padrão ao focar */
+    border: none; /* Garante que nenhuma borda apareça */
+}
+
+
+
+
+
+
+
+
+
+.inner-box {
+    width: 538px; /* Largura da caixa interna */
+    height: 276px; /* Altura total da caixa interna */
+    border: 1px dashed #66666600; /* Borda da caixa interna */
+    border-radius: 5px; /* Bordas arredondadas da caixa interna */
+    background-color: #e0e0e000; /* Cor de fundo da caixa interna */
+    display: flex;
+    flex-direction: column; /* Muda a direção do flex para coluna */
+    justify-content: space-between; /* Espaço igual entre as caixas */
+    margin-top: 23px; /* Espaço entre caixas */
+}
+
+
+
+.box1 {
+    width: 100%; /* Largura total da caixa interna */
+    height: 249px; /* Altura de cada caixa */
+    border: 1px solid #99999900; /* Borda das caixas internas */
+    background-color: #f0f0f000; /* Cor de fundo das caixas internas */
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: flex-start; /* Alinha o conteúdo no topo (de cima para baixo) */
+    margin: 0; /* Remove margem */
+}
+
+
+.box2 {
+    width: 100%; /* Largura total da caixa interna */
+    height: 28px; /* Altura de cada caixa */
+    border: 1px solid #99999900; /* Borda das caixas internas */
+    background-color: #f0f0f000; /* Cor de fundo das caixas internas */
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    margin: 0; /* Remove margem */
+}
+
+
+/* Remove as setas em navegadores modernos */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+
+
+/* Para Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+
+[class^="text-input"] {}
+	
+[class^="text-input"]:focus {
+    outline: none; /* Remove a borda padrão ao focar */
+    border: none; /* Garante que nenhuma borda apareça */
+}
+
+.text-input {
+    width: 33px; /* Cada caixa ocupa 50% da largura*/ 
+    height: 17px; /* Altura das caixas de texto */
+    background-size: 100% 100%; /* Ajusta a imagem para cobrir todo o input */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Impede que a imagem se repita */
+    background-color: #3e8e4100;
+    font-size: 8px;
+    font-family: sans-serif;
+    letter-spacing:0px;
+    border: none; /* Remove a borda padrão */
+    color: #d5d5d4; /* Define a cor do texto (opcional) */
+    margin-top: 2px; /* Espaça os botões */
+    margin-bottom: 0px; /* Espaça os botões */
+}
+
+.text-input1 {
+    width:33px; /* Cada caixa ocupa 50% da largura*/
+    height: 17px; /* Altura das caixas de texto */
+    background-size: 100% 100%; /* Ajusta a imagem para cobrir todo o input */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Impede que a imagem se repita */
+    background-color: #3e8e4100;
+    float: left; /* Espaça os botões */
+    font-size: 8px;
+    font-family: sans-serif;
+    letter-spacing:0px;
+    border: none; /* Remove a borda padrão */
+    color: #d5d5d4; /* Define a cor do texto (opcional) */
+    margin-top: 2px; /* Espaça os botões */
+    margin-bottom: 0px; /* Espaça os botões */
+    margin-left: 6px; /* Espaça os botões */
+    cursor: url('img/cursor1.png'), auto; /* Caminho da imagem convertida */
+}
+
+.text-input2 {
+    width:33px; /* Cada caixa ocupa 50% da largura*/
+    height: 17px; /* Altura das caixas de texto */
+    background-size: 100% 100%; /* Ajusta a imagem para cobrir todo o input */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Impede que a imagem se repita */
+    background-color: #3e8e4100;
+    float: right; /* Espaça os botões */
+    font-size: 8px;
+    font-family: sans-serif;
+    letter-spacing:0px;
+    border: none; /* Remove a borda padrão */
+    color: #d5d5d4; /* Define a cor do texto (opcional) */
+    margin-top: 2px; /* Espaça os botões */
+    margin-bottom: 0px; /* Espaça os botões */
+    margin-right: -1px; /* Espaça os botões */
+    cursor: url('img/cursor1.png'), auto; /* Caminho da imagem convertida */
+}
+
+.text-input8 {
+    width:33px; /* Cada caixa ocupa 50% da largura*/
+    height: 17px; /* Altura das caixas de texto */
+    background-size: 100% 100%; /* Ajusta a imagem para cobrir todo o input */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Impede que a imagem se repita */
+    background-color: #3e8e4100;
+    float: left; /* Espaça os botões */
+    font-size: 8px;
+    font-family: sans-serif;
+    letter-spacing:0px;
+    border: none; /* Remove a borda padrão */
+    color: #d5d5d4; /* Define a cor do texto (opcional) */
+    margin-top: 0px; /* Espaça os botões */
+    margin-bottom: 0px; /* Espaça os botões */
+    margin-left: 6px; /* Espaça os botões */
+    cursor: url('img/cursor1.png'), auto; /* Caminho da imagem convertida */
+}
+
+.text-input9 {
+    width:33px; /* Cada caixa ocupa 50% da largura*/
+    height: 17px; /* Altura das caixas de texto */
+    background-size: 100% 100%; /* Ajusta a imagem para cobrir todo o input */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Impede que a imagem se repita */
+    background-color: #3e8e4100;
+    float: right; /* Espaça os botões */
+    font-size: 8px;
+    font-family: sans-serif;
+    letter-spacing:0px;
+    border: none; /* Remove a borda padrão */
+    color: #d5d5d4; /* Define a cor do texto (opcional) */
+    margin-top: 0px; /* Espaça os botões */
+    margin-bottom: 0px; /* Espaça os botões */
+    margin-right: -1px; /* Espaça os botões */
+    cursor: url('img/cursor1.png'), auto; /* Caminho da imagem convertida */
+}
+
+.text-input3 {
+    width: 90px; /* Cada caixa ocupa 50% da largura*/
+    height: 14px; /* Altura das caixas de texto */
+    background-size: 100% auto; /* Ajusta a imagem para cobrir todo o input */
+    background-position: center; /* Centraliza a imagem */
+    background-color: #3e8e4100;
+    float: right; /* Espaça os botões */
+    font-size: 8px;
+    font-family: sans-serif;
+    letter-spacing:0px;
+    border: none; /* Remove a borda padrão */
+    color: #d5d5d4; /* Define a cor do texto (opcional) */
+    margin-top: -3px; /* Espaça os botões */
+    margin-bottom: 0px; /* Espaça os botões */
+    cursor: url('img/cursor1.png'), auto; /* Caminho da imagem convertida */
+}
+
+.text-input3-1 {
+    width:34px; /* Cada caixa ocupa 50% da largura*/ 
+    height: 14px; /* Altura das caixas de texto */
+    background-size: 100% 100%; /* Ajusta a imagem para cobrir todo o input */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Impede que a imagem se repita */
+    background-color: #3e8e4100;
+    float: right; /* Espaça os botões */
+    margin-left: 19px;
+    font-size: 8px;
+    font-family: sans-serif;
+    letter-spacing:0px;
+    border: none; /* Remove a borda padrão */
+    color: #d5d5d4; /* Define a cor do texto (opcional) */
+    margin-top: -2px; /* Espaça os botões */
+    margin-bottom: 0px; /* Espaça os botões */
+    margin-right: -1px; /* Espaça os botões */
+    cursor: url('img/cursor1.png'), auto; /* Caminho da imagem convertida */
+}
+
+.text-input4 {
+    width:90px; /* Cada caixa ocupa 50% da largura*/ 
+    height: 17px; /* Altura das caixas de texto */
+    background-size: 100% auto; /* Ajusta a imagem para cobrir todo o input */
+    background-position: center; /* Centraliza a imagem */
+    background-color: #3e8e4100;
+    float: right; /* Espaça os botões */
+    font-size: 8px;
+    font-family: sans-serif;
+    letter-spacing:0px;
+    border: none; /* Remove a borda padrão */
+    color: #d5d5d4; /* Define a cor do texto (opcional) */
+    margin-top: 2px; /* Espaça os botões */
+    margin-bottom: 6px; /* Espaça os botões */
+    cursor: url('img/cursor1.png'), auto; /* Caminho da imagem convertida */
+}
+
+.text-input5 {
+    width:109px; /* Cada caixa ocupa 50% da largura*/ 
+    height: 17px; /* Altura das caixas de texto */
+    background-size: 100% auto; /* Ajusta a imagem para cobrir todo o input */
+    background-position: center; /* Centraliza a imagem */
+    background-color: #3e8e4100;
+    float: right; /* Espaça os botões */
+    font-size: 8px;
+    font-family: sans-serif;
+    letter-spacing:0px;
+    border: none; /* Remove a borda padrão */
+    color: #d5d5d4; /* Define a cor do texto (opcional) */
+    margin-top: -3px; /* Espaça os botões */
+    margin-bottom: 6px; /* Espaça os botões */
+    cursor: url('img/cursor1.png'), auto; /* Caminho da imagem convertida */
+}
+
+/****************************************************************************************/
+
+.button-container {
+    display: flex; /* Organiza os botões na horizontal */
+    width: 97.6%; /* Largura total da caixa personalizada */
+    justify-content: space-between; /* Espaça os botões */
+    position: absolute; /* Posiciona a button-container de forma absoluta */
+    bottom: 8px; /* Encosta ao fundo do contêiner pai */
+    margin-top: 0px; /* Espaçamento acima dos botões */
+}
+
+.left-button, .right-button {
+    width: 120px; /* Largura dos botões */
+    height: 19px; /* Altura dos botões */
+    border: none; /* Remove a borda padrão */
+    border-radius: 1px; /* Bordas arredondadas dos botões */
+    background-color: #6F6F6E; /* Cor de fundo dos botões */
+    background-image: url('img/btn.png'); /* Caminho para a imagem de fundo */
+	background-size: cover; /* A imagem cobre toda a caixa */
+    background-position: center; /* Centraliza a imagem */
+	background-repeat: no-repeat;	
+    color: #d5d5d4; /* Cor do texto dos botões */
+    cursor: pointer; /* Cursor de ponteiro ao passar sobre os botões */
+    font-size: 9px;
+    font-family: sans-serif;
+    letter-spacing:0px;
+    cursor: url('img/cursor1.png'), auto; /* Caminho da imagem convertida */
+}
+
+.left-button:hover, .right-button:hover {
+    background-color: #45a049; /* Cor de fundo ao passar o mouse */
+    background-color: #6F6F6E; /* Cor de fundo dos botões */
+    background-image: url('img/btn.png'); /* Caminho para a imagem de fundo */
+	background-size: 100% auto; /* A imagem cobre toda a caixa */
+    background-position: center; /* Centraliza a imagem */
+	background-repeat: no-repeat;	
+    font-size: 9px;
+    font-family: sans-serif;
+    letter-spacing:0px;
+}
+
+.left-button:active, .right-button:active {
+    background-color: #3e8e41; /* Cor de fundo ao clicar no botão */
+    background-image: url('img/btn.png'); /* Caminho para uma imagem diferente ao clicar */
+    background-size: 100% auto; /* A imagem cobre toda a caixa */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Não repete a imagem */
+    filter: brightness(0.7);
+    font-family: sans-serif;
+    letter-spacing:0px;
+}
+
+/****************************************************************************************/
+
+
+#csv-table {
+    width: 99%; /* Largura total da tabela */
+    border-collapse: separate; /* Permite espaços entre as células */
+    border-spacing: 0 3px; /* Espaço entre as linhas e colunas */
+    font-size: 11px;
+    color: #d5d5d4;
+    padding: 0px;
+}
+
+#csv-table td, #csv-table th {
+    border: 1px solid #33333300; /* Borda das células */
+    padding: 0px; /* Espaçamento interno das células */
+    text-align: center; /* Alinha o texto ao centro */
+    padding: 0px;
+}
+
+
+
+
+/* Para definir largura específica das colunas */
+#csv-table th {
+    width: 150px; /* Largura da coluna de cabeçalho */
+}
+
+/* Exemplo: Definir largura específica para a segunda coluna */
+#csv-table td:nth-child(1) {
+    width: 30%; /* Largura da segunda coluna */
+}
+
+/* Exemplo: Definir largura específica para a segunda coluna */
+#csv-table td:nth-child(2) {
+    width: 20%; /* Largura da segunda coluna */
+}
+
+/* Exemplo: Definir largura específica para a segunda coluna */
+#csv-table td:nth-child(3) {
+    width: 10%; /* Largura da segunda coluna */
+}
+
+/* Exemplo: Definir largura específica para a segunda coluna */
+#csv-table td:nth-child(4) {
+    width: 10%; /* Largura da segunda coluna */
+}
+
+/* Exemplo: Definir largura específica para a segunda coluna */
+#csv-table td:nth-child(5) {
+    width: 20%; /* Largura da segunda coluna */
+}
+
+
+
+
+/* Para definir espaço entre as linhas */
+#csv-table tr {
+    height: 19px; /* Altura da linha */
+    line-height: 19px; /* Altura da linha */
+    background-image: url('img/tab_04.png'); /* Caminho para uma imagem diferente ao clicar */
+    background-size: 100% 100%; /* A imagem cobre toda a caixa */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Não repete a imagem */
+    cursor: url('img/cursor1.png'), auto; /* Caminho da imagem convertida */
+}
+
+/* Para definir espaço entre as linhas */
+#csv-table tr + tr {
+    margin-top: 10px; /* Espaço entre linhas (não funcionará devido a border-collapse, mas pode ser utilizado se border-collapse for removido) */
+}
+
+
+#csv-table tr td:nth-child(3) {
+    background-image: url('img/tab_04_number.png'); /* Altere o caminho para a imagem desejada */
+    background-size: 60% 90%; /* Cobre a célula completamente */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Não repete a imagem */
+}
+
+
+#csv-table tr.selected {
+    background-image: url('img/tab_04_select.png'); /* Altere o caminho para a imagem desejada */
+}
+
+
+.prev-button, .next-button {
+    width: 120px; /* Largura dos botões */
+    height: 19px; /* Altura dos botões */
+    border: none; /* Remove a borda padrão */
+    border-radius: 1px; /* Bordas arredondadas dos botões */
+    background-color: #6F6F6E; /* Cor de fundo dos botões */
+    background-image: url('img/btn.png'); /* Caminho para a imagem de fundo */
+	background-size: cover; /* A imagem cobre toda a caixa */
+    background-position: center; /* Centraliza a imagem */
+	background-repeat: no-repeat;	
+    color: #d5d5d4; /* Cor do texto dos botões */
+    cursor: pointer; /* Cursor de ponteiro ao passar sobre os botões */
+    font-size: 9px;
+    font-family: sans-serif;
+    letter-spacing:0px;
+}
+
+.prev-button:hover, .next-button:hover {
+    background-color: #45a049; /* Cor de fundo ao passar o mouse */
+    background-color: #6F6F6E; /* Cor de fundo dos botões */
+    background-image: url('img/btn.png'); /* Caminho para a imagem de fundo */
+	background-size: 100% auto; /* A imagem cobre toda a caixa */
+    background-position: center; /* Centraliza a imagem */
+	background-repeat: no-repeat;	
+    font-size: 9px;
+    font-family: sans-serif;
+    letter-spacing:0px;
+}
+
+.prev-button:active, .next-button:active {
+    background-color: #3e8e41; /* Cor de fundo ao clicar no botão */
+    background-image: url('img/btn.png'); /* Caminho para uma imagem diferente ao clicar */
+    background-size: 100% auto; /* A imagem cobre toda a caixa */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Não repete a imagem */
+    filter: brightness(0.7);
+    font-family: sans-serif;
+    letter-spacing:0px;
+}
+
+.pagination-button {
+    border: none;
+    background-color: transparent; /* Fundo transparente */
+    cursor: url('img/cursor1.png'), auto; /* Caminho da imagem convertida */
+}
+
+.first-page {
+    background-image: url('img/first-page.png'); /* Imagem para o botão da primeira página */
+    background-repeat: no-repeat; /* Não repete a imagem */
+    background-size: 100% auto; /* A imagem cobre toda a caixa */
+    background-position: center; /* Centraliza a imagem */
+    width: 15px; /* Largura da imagem */
+    height: 15px; /* Altura da imagem */
+    padding-bottom: 4px;
+}
+
+.prev-page {
+    background-image: url('img/prev-page.png'); /* Imagem para o botão de página anterior */
+    background-repeat: no-repeat; /* Não repete a imagem */
+    background-size: 100% auto; /* A imagem cobre toda a caixa */
+    background-position: center; /* Centraliza a imagem */
+    width: 15px;
+    height: 15px;
+    padding-bottom: 4px;
+}
+
+.page-numbers-container {
+    display: flex; /* Flexbox para organizar os botões horizontalmente */
+    gap: 5px; /* Espaçamento entre os botões */
+}
+
+.page-number {
+    background-image: url('img/page-numbers.png'); /* Imagem para os botões de número de página */
+    background-repeat: no-repeat; /* Não repete a imagem */
+    background-size: cover; /* A imagem cobre toda a caixa */
+    background-position: center; /* Centraliza a imagem */
+    width: 35px; /* Largura da caixa */
+    height: 20px; /* Altura da caixa */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    border: none; /* Remove borda padrão */
+    cursor: url('img/cursor1.png'), auto; /* Caminho da imagem convertida */
+    margin: 2px; /* Espaçamento entre os botões */
+    color: #d5d5d4; /* Cor do texto */
+    font-family: sans-serif;
+}
+
+
+.page-number:active {
+    filter: brightness(0.7);
+}
+
+.current-page {
+    filter: brightness(0.4); /* Efeito de brilho para a página atual */
+    /* Adicione outros estilos se necessário */
+}
+
+.page-number:hover {
+    filter: brightness(0.7);
+}
+
+.next-page {
+    background-image: url('img/next-page.png'); /* Imagem para o botão de próxima página */
+    background-repeat: no-repeat; /* Não repete a imagem */
+    background-size: 100% auto; /* A imagem cobre toda a caixa */
+    background-position: center; /* Centraliza a imagem */
+    width: 15px;
+    height: 15px;
+    padding-bottom: 4px;
+}
+
+.last-page {
+    background-image: url('img/last-page.png'); /* Imagem para o botão da última página */
+    background-repeat: no-repeat; /* Não repete a imagem */
+    background-size: 100% auto; /* A imagem cobre toda a caixa */
+    background-position: center; /* Centraliza a imagem */
+    width: 15px;
+    height: 15px;
+    padding-bottom: 4px;
+}
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+/* Estilos individuais para os grupos de formulário */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Estilo para cada label */
+.label-item-name,
+.label-item-date,
+.label-item-quantity,
+.label-item-won,
+.label-item-yang {
+    font-weight: bold;
+    margin-bottom: 2px;
+    display: block;
+}
+
+/* Estilos para os campos de input */
+.input-item-name,
+.input-item-date,
+.input-item-quantity,
+.input-item-won,
+.input-item-yang {
+    width: 20%;
+    height: 20%;
+    padding: 3px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 5px;
+    font-size: 10px;
+}
+
+/* Estilo dos botões */
+.btn-save, .btn-cancel {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-save {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-cancel {
+    background-color: #f44336;
+    color: white;
+}
+
+/* Efeitos de hover para os botões */
+.btn-save:hover {
+    background-color: #0056b3;
+}
+
+.btn-cancel:hover {
+    background-color: #d32f2f;
+}
+>>>>>>> d4e8722 (patch1)
