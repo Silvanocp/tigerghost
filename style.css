@@ -50,7 +50,7 @@ body {
     width: 683px; /* Largura personalizada */
     height: 363px; /* Altura personalizada */
     border: 2px solid #333; /* Borda da caixa */
-    border-radius: 11px; /* Bordas arredondadas */
+    border-radius: 10px; /* Bordas arredondadas */
     background-color: #fff; /* Cor de fundo */
     background-image: url('img/bg.png'); /* Caminho para a imagem de fundo */
     background-size: cover; /* A imagem cobre toda a caixa */
@@ -412,6 +412,7 @@ input[type=number] {
     position: absolute; /* Posiciona a button-container de forma absoluta */
     bottom: 8px; /* Encosta ao fundo do contêiner pai */
     margin-top: 0px; /* Espaçamento acima dos botões */
+    z-index: 1;
 }
 
 .left-button, .right-button {
@@ -430,6 +431,7 @@ input[type=number] {
     font-family: sans-serif;
     letter-spacing:0px;
     cursor: url('img/cursor1.png'), auto; /* Caminho da imagem convertida */
+    z-index: 0
 }
 
 .left-button:hover, .right-button:hover {
@@ -722,4 +724,160 @@ input[type=number] {
 
 .btn-cancel:hover {
     background-color: #d32f2f;
+}
+
+
+
+
+
+
+
+.error-message {
+    width: 50%; /* Largura dos botões */
+    height: 100px; /* Altura dos botões */
+    background-color: #f8d7da00; /* Cor de fundo clara (vermelha) */
+    color: #a5a5a5; /* Cor do texto (vermelho escuro) */
+    border: 1px solid #f5c6cb00; /* Borda sutil */
+    padding: 0px; /* Espaçamento interno */
+    margin-top: 78%; /* Espaçamento acima da mensagem */
+    margin-left: -65px; /* Espaçamento acima da mensagem */
+    border-radius: 0px; /* Cantos arredondados */
+    background-image: url('img/select_reino1.png');
+    background-size: contain; /* A imagem cobre toda a caixa */
+	background-repeat: no-repeat;
+    font-size: 13px;
+    z-index: 2;
+    display: flex;
+    align-items: center; /* Alinha verticalmente */
+    justify-content: center; /* Alinha horizontalmente */
+    text-align: center; /* Alinha o texto dentro do próprio contêiner */
+    z-index: 5;
+    
+}
+
+
+
+.reino {
+    margin-top: 3px;
+    margin-left: -33.7%;
+    z-index: 2;
+}
+
+
+.azul {
+    width: 57px; /* Largura dos botões */
+    height: 24px; /* Altura dos botões */
+    border: none; /* Remove a borda padrão */
+    border-radius: 1px; /* Bordas arredondadas dos botões */
+    background-color: #6f6f6e00; /* Cor de fundo dos botões */
+    background-image: url('img/reinos.png'); /* Caminho para a imagem de fundo */
+	background-size: cover; /* A imagem cobre toda a caixa */
+    background-position: center; /* Centraliza a imagem */
+	background-repeat: no-repeat;	
+    color: #d5d5d4; /* Cor do texto dos botões */
+    cursor: pointer; /* Cursor de ponteiro ao passar sobre os botões */
+    font-size: 9px;
+    font-family: sans-serif;
+    letter-spacing:0px;
+    cursor: url('img/cursor1.png'), auto; /* Caminho da imagem convertida */
+}
+
+
+
+
+
+.azul.selected {
+    background-image: url('img/azul.png'); /* Caminho para a imagem de fundo */
+    width: 57px; /* Largura dos botões */
+    height: 24px; /* Altura dos botões */
+    border: none; /* Remove a borda padrão */
+    border-radius: 1px; /* Bordas arredondadas dos botões */
+    background-color: #6f6f6e00; /* Cor de fundo dos botões */
+	background-size: cover; /* A imagem cobre toda a caixa */
+    background-position: center; /* Centraliza a imagem */
+	background-repeat: no-repeat;	
+    color: #d5d5d4; /* Cor do texto dos botões */
+    cursor: pointer; /* Cursor de ponteiro ao passar sobre os botões */
+    font-size: 9px;
+    font-family: sans-serif;
+    letter-spacing:0px;
+    cursor: url('img/cursor1.png'), auto; /* Caminho da imagem convertida */
+}
+
+
+.vermelho {
+    width: 57px; /* Largura dos botões */
+    height: 24px; /* Altura dos botões */
+    border: 100px #6f6f6e02; /* Remove a borda padrão */
+    background-color: #6f6f6e02; /* Cor de fundo dos botões */
+    background-image: url('img/reinos.png'); /* Caminho para a imagem de fundo */
+	background-size: cover; /* A imagem cobre toda a caixa */
+    background-position: center; /* Centraliza a imagem */
+	background-repeat: no-repeat;	
+    color: #d5d5d4; /* Cor do texto dos botões */
+    cursor: pointer; /* Cursor de ponteiro ao passar sobre os botões */
+    font-size: 0px;
+    font-family: sans-serif;
+    letter-spacing:0px;
+    cursor: url('img/cursor1.png'), auto; /* Caminho da imagem convertida */
+    
+}
+
+
+
+.vermelho.selected {
+    background-image: url('img/vermelho.png'); /* Caminho para a imagem de fundo */
+    width: 57px; /* Largura dos botões */
+    height: 24px; /* Altura dos botões */
+    border: none; /* Remove a borda padrão */
+    border-radius: 1px; /* Bordas arredondadas dos botões */
+    background-color: #6f6f6e00; /* Cor de fundo dos botões */
+	background-size: cover; /* A imagem cobre toda a caixa */
+    background-position: center; /* Centraliza a imagem */
+	background-repeat: no-repeat;	
+    color: #d5d5d4; /* Cor do texto dos botões */
+    cursor: pointer; /* Cursor de ponteiro ao passar sobre os botões */
+    font-size: 9px;
+    font-family: sans-serif;
+    letter-spacing:0px;
+    cursor: url('img/cursor1.png'), auto; /* Caminho da imagem convertida */
+}
+
+
+
+.amarelo {
+    width: 57px; /* Largura dos botões */
+    height: 24px; /* Altura dos botões */
+    border: none; /* Remove a borda padrão */
+    border-radius: 1px; /* Bordas arredondadas dos botões */
+    background-color: #6f6f6e00; /* Cor de fundo dos botões */
+    background-image: url('img/reinos.png'); /* Caminho para a imagem de fundo */
+	background-size: cover; /* A imagem cobre toda a caixa */
+    background-position: center; /* Centraliza a imagem */
+	background-repeat: no-repeat;	
+    color: #d5d5d4; /* Cor do texto dos botões */
+    cursor: pointer; /* Cursor de ponteiro ao passar sobre os botões */
+    font-size: 9px;
+    font-family: sans-serif;
+    letter-spacing:0px;
+    cursor: url('img/cursor1.png'), auto; /* Caminho da imagem convertida */
+}
+
+
+.amarelo.selected {
+    background-image: url('img/amarelo.png'); /* Caminho para a imagem de fundo */
+    width: 57px; /* Largura dos botões */
+    height: 24px; /* Altura dos botões */
+    border: none; /* Remove a borda padrão */
+    border-radius: 1px; /* Bordas arredondadas dos botões */
+    background-color: #6f6f6e00; /* Cor de fundo dos botões */
+	background-size: cover; /* A imagem cobre toda a caixa */
+    background-position: center; /* Centraliza a imagem */
+	background-repeat: no-repeat;	
+    color: #d5d5d4; /* Cor do texto dos botões */
+    cursor: pointer; /* Cursor de ponteiro ao passar sobre os botões */
+    font-size: 9px;
+    font-family: sans-serif;
+    letter-spacing:0px;
+    cursor: url('img/cursor1.png'), auto; /* Caminho da imagem convertida */
 }
