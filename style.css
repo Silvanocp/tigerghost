@@ -16,24 +16,26 @@ body {
     cursor: text; /* Cursor de texto ao passar sobre células da tabela */
 }
 
-.box-1 {
-    display: flex; /* Organiza as caixas internas na horizontal */
-    width: 100%; /* Usa a largura total da caixa externa */
-    padding: 0; /* Remove qualquer preenchimento do contêiner */
-    margin: 0; /* Remove qualquer margem do contêiner */
-}
-
-
 #edit-area {
     display: none; /* Inicia oculto */
     position: absolute; /* Posiciona a div em relação ao pai */
-    top: 10%; /* Alinha ao topo do contêiner */
-    left: 70%; /* Move para a direita da box pai */
-    margin-left: 20px; /* Espaço entre a área de edição e a box */
-    align-items: center;
+    top: 0; /* Alinha ao topo da custom-box */
+    left: calc(100% + 20px); /* Coloca o edit-area à direita da custom-box com 20px de espaço */
     background-image: url('img/editbg.png');
     width: 255px; /* Largura personalizada */
     height: 255px; /* Altura personalizada */
+    border: 2px solid #333; /* Borda */
+    border-radius: 11px; /* Bordas arredondadas */
+    display: flex; /* Flexbox para centralizar conteúdo */
+    align-items: center; /* Centraliza conteúdo verticalmente */
+    justify-content: center; /* Centraliza conteúdo horizontalmente */
+}
+
+/* Exibir o #edit-area ao lado quando necessário */
+.custom-box-container {
+    position: relative;
+    display: flex; /* Exibe os elementos lado a lado */
+    justify-content: space-between; /* Espaço entre os elementos */
 }
 
 .custom-box {
@@ -651,11 +653,6 @@ input[type=number] {
     height: 15px;
     padding-bottom: 4px;
 }
-<<<<<<< HEAD
-=======
-
-
-
 
 
 
@@ -719,4 +716,3 @@ input[type=number] {
 .btn-cancel:hover {
     background-color: #d32f2f;
 }
->>>>>>> d4e8722 (patch1)
