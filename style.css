@@ -18,9 +18,6 @@ body {
 
 #edit-area {
     display: none; /* Inicia oculto */
-    position: absolute; /* Posiciona a div em relação ao pai */
-    top: 0; /* Alinha ao topo da custom-box */
-    left: calc(100% + 20px); /* Coloca o edit-area à direita da custom-box com 20px de espaço */
     background-image: url('img/editbg.png');
     width: 255px; /* Largura personalizada */
     height: 255px; /* Altura personalizada */
@@ -31,11 +28,10 @@ body {
     justify-content: center; /* Centraliza conteúdo horizontalmente */
 }
 
-/* Exibir o #edit-area ao lado quando necessário */
 .custom-box-container {
-    position: relative;
     display: flex; /* Exibe os elementos lado a lado */
-    justify-content: space-between; /* Espaço entre os elementos */
+    align-items: flex-start; /* Alinha os elementos pelo topo */
+    position: relative; /* Para posicionar os itens corretamente */
 }
 
 .custom-box {
