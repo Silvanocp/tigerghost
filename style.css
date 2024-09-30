@@ -20,13 +20,13 @@ body {
 #edit-area {
     display: none; /* Inicia oculto */
     background-image: url('img/editbg.png');
-    width: 255px; /* Largura personalizada */
+    width: 256px; /* Largura personalizada */
     height: 255px; /* Altura personalizada */
     border: 2px solid #333; /* Borda */
     border-radius: 11px; /* Bordas arredondadas */
     position: absolute; /* Remove da estrutura de fluxo normal */
     top: 30px; /* Distância acima da custom-box, ajuste conforme necessário */
-    left: 120%; /* Posiciona à esquerda */
+    left: 118.5%; /* Posiciona à esquerda */
     transform: translateX(-50%); /* Ajusta a posição para o centro */
     display: flex; /* Flexbox para centralizar conteúdo */
     justify-content: flex-start; /* Alinha o conteúdo ao topo */
@@ -39,7 +39,7 @@ body {
     display: flex; /* Alinha os elementos lado a lado */
     flex-direction: column; /* Organiza o conteúdo na vertical */
     align-items: center; /* Centraliza horizontalmente */
-    background-color: #fff; /* Cor de fundo */
+    margin: 10px;
 }
 
 
