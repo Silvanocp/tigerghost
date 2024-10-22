@@ -1,28 +1,234 @@
-Nome do Item,Data,Quantidade,Won,Yang,classe,item,itemtype,nivel,niveldoitem
-Espada,27/09/2024,1,20,-,Guerreiro,Espada,-,120,8
-Escudo de Madeira,27/09/2024,1,2,222.222,-,Equipes,Escudo,10,9
-Poção de Vida,27/09/2024,100,-,100.000,-,,-,-,-
-Armadura de Couro,27/09/2024,1,-,-,-,Equipes,Armadura,-,2
-Anel de Ouro,345
-Anel de Ouro,27/09/2024,1,-,-,-,,-,-,-
-Arco,27/09/2024,1,-,-,Ninja,Espada,-,2,5
-Armadura de Couro,27/09/2024,1,-,-,-,Equipes,Armadura,-,2
-Espada,27/09/2024,1,2,-,Guerreiro,Espada,-,20,8
-Espada,27/09/2024,1,40,-,Guerreiro,Espada,-,120,8
-Armadura de Couro,27/09/2024,1,-,-,-,Equipes,Armadura,-,2
-Armadura de Couro,27/09/2024,1,-,-,-,Equipes,Armadura,-,2
-Armadura de Couro,27/09/2024,1,-,-,-,Equipes,Armadura,-,2
-Armadura de Couro,27/09/2024,1,-,-,-,Equipes,Armadura,-,2
-Armadura de Couro,27/09/2024,1,-,-,-,Equipes,Armadura,-,2
-Armadura de Couro,27/09/2024,1,-,-,-,Equipes,Armadura,-,2
-Armadura de Couro,27/09/2024,1,-,-,-,Equipes,Armadura,-,2
-Armadura de Couro,27/09/2024,1,-,-,-,Equipes,Armadura,-,2
-Armadura de Couro,27/09/2024,1,-,-,-,Equipes,Armadura,-,2
-Espada,27/09/2024,1,2,-,Guerreiro,Espada,-,20,8
-Espada,27/09/2024,1,2,-,Guerreiro,Espada,-,10,8
-Arco,27/09/2024,1,-,-,Ninja,Espada,-,2,5
-Arco,27/09/2024,1,-,-,Ninja,Espada,-,2,5
-Arco,27/09/2024,1,-,-,Ninja,Espada,-,2,5
-Escudo de Madeira,27/09/2024,1,2,222.222,-,Equipes,Escudo,10,9
-Escudo de Madeira,27/09/2024,1,2,222.222,-,Equipes,Escudo,10,9
-Escudo de Madeira,27/09/2024,1,2,222.222,-,Equipes,Escudo,10,9
+Nome do Item,Data,Quantidade,Won,Yang,classe,item,itemtype,nivel,niveldoitem,won2,yang2
+Amuleto de Orc,20/09/2023,1,-,2.200.000 ,-,Upgrades,-,-,-,-,2.200.000 
+Amuleto de Orc+,21/09/2023,1,-,450.000 ,-,Upgrades,-,-,-,-,450.000 
+Areia de Quartzo,22/09/2023,1,-,22.000.000 ,-,Upgrades,-,-,-,-,22.000.000 
+Bandeira,23/09/2023,1,-,300.000 ,-,Upgrades,-,-,-,-,300.000 
+Cartilha Esotérica,24/09/2023,1,-,1.000.000 ,-,Upgrades,-,-,-,-,1.000.000 
+Cartilha Esotérica+,25/09/2023,1,-,100.000 ,-,Upgrades,-,-,-,-,100.000 
+Cinzas do Demónio,26/09/2023,1,-,2.500.000 ,-,Upgrades,-,-,-,-,2.500.000 
+Corno de Orca,27/09/2023,1,-,1.400.000 ,-,Upgrades,-,-,-,-,1.400.000 
+Couro de Tigre Branco,28/09/2023,1,-,450.000 ,-,Upgrades,-,-,-,-,450.000 
+Creme de Rosto,29/09/2023,1,-,300.000 ,-,Upgrades,-,-,-,-,300.000 
+Cristal Azul,30/09/2023,1,-,1.000.000 ,-,Upgrades,-,-,-,-,1.000.000 
+Cristal de Água,01/10/2023,1,-,1.000.000 ,-,Upgrades,-,-,-,-,1.000.000 
+Dente de Orc,02/10/2023,1,-,2.000.000 ,-,Upgrades,-,-,-,-,2.000.000 
+Dente de Orc+,03/10/2023,1,-,270.000 ,-,Upgrades,-,-,-,-,270.000 
+Diamante do Demónio,04/10/2023,1,-,250.000 ,-,Upgrades,-,-,-,-,250.000 
+Diamante do Demónio+,05/10/2023,1,-,200.000 ,-,Upgrades,-,-,-,-,200.000 
+Escamas do Dragão,06/10/2023,1,-,65.000.000 ,-,Upgrades,-,-,-,-,65.000.000 
+Espinha,07/10/2023,1,-,499.999 ,-,Upgrades,-,-,-,-,499.999 
+Fel de Urso,08/10/2023,1,-,500.000 ,-,Upgrades,-,-,-,-,500.000 
+Fel de Urso+,09/10/2023,1,-,250.000 ,-,Upgrades,-,-,-,-,250.000 
+Ferrão de Escorpião,10/10/2023,1,-,100.000 ,-,Upgrades,-,-,-,-,100.000 
+Fita de Javali Branco,11/10/2023,1,-,250.000 ,-,Upgrades,-,-,-,-,250.000 
+Fita de Javali Branco+,12/10/2023,1,-,400.000 ,-,Upgrades,-,-,-,-,400.000 
+Fita de Javali Rubro,13/10/2023,1,-,6.000.000 ,-,Upgrades,-,-,-,-,6.000.000 
+Folha,14/10/2023,1,-,50.000 ,-,Upgrades,-,-,-,-,50.000 
+Fragmento de Energia,15/10/2023,200,-,7.000.000 ,-,Upgrades,-,-,-,-,7.000.000 
+Gancho de Cabelo,16/10/2023,1,-,200.000 ,-,Upgrades,-,-,-,-,200.000 
+Garra de Escorpião,17/10/2023,1,-,300.000 ,-,Upgrades,-,-,-,-,300.000 
+Garra de Lobo,18/10/2023,1,-,50.000 ,-,Upgrades,-,-,-,-,50.000 
+Garra de Lobo+,19/10/2023,1,-,120.000 ,-,Upgrades,-,-,-,-,120.000 
+Garra do Dragão,20/10/2023,1,-,100.000.000 ,-,Upgrades,-,-,-,-,100.000.000 
+Juba Flamejante,21/10/2023,1,-,500.000 ,-,Upgrades,-,-,-,-,500.000 
+Lâmina Ferrugenta,22/10/2023,1,-,50.000 ,-,Upgrades,-,-,-,-,50.000 
+Lembrança do Demónio,23/10/2023,1,-,350.000 ,-,Upgrades,-,-,-,-,350.000 
+Lembrança do Demónio+,24/10/2023,1,-,1.000.000 ,-,Upgrades,-,-,-,-,1.000.000 
+Língua de Rã,25/10/2023,1,-,100.000 ,-,Upgrades,-,-,-,-,100.000 
+Livro da Maldição,26/10/2023,1,-,1.500.000 ,-,Upgrades,-,-,-,-,1.500.000 
+Livro da Maldição+,27/10/2023,1,-,100.000 ,-,Upgrades,-,-,-,-,100.000 
+Mármore de Gelo,28/10/2023,1,-,1.300.000 ,-,Upgrades,-,-,-,-,1.300.000 
+Mármore de Gelo+,29/10/2023,1,-,400.000 ,-,Upgrades,-,-,-,-,400.000 
+Moca de Orc,30/10/2023,1,-,100.000 ,-,Upgrades,-,-,-,-,100.000 
+Novelo,31/10/2023,1,-,50.000 ,-,Upgrades,-,-,-,-,50.000 
+Olhos de Aranha,01/11/2023,1,-,500.000 ,-,Upgrades,-,-,-,-,500.000 
+Ornamento,02/11/2023,1,-,100.000 ,-,Upgrades,-,-,-,-,100.000 
+Ossos de Esqueleto,03/11/2023,1,-,20.000 ,-,Upgrades,-,-,-,-,20.000 
+Ostra,04/11/2023,1,-,400.000 ,-,Upgrades,-,-,-,-,400.000 
+Ovos de Aranha,05/11/2023,1,-,500.000 ,-,Upgrades,-,-,-,-,500.000 
+Peça de Armadura Partida,06/11/2023,1,-,400.000 ,-,Upgrades,-,-,-,-,400.000 
+Pedaço de Diamante,07/11/2023,1,-,400.000 ,-,Upgrades,-,-,-,-,400.000 
+Pedaço de Gelo,08/11/2023,1,-,750.000 ,-,Upgrades,-,-,-,-,750.000 
+Pedaço de Gelo+,09/11/2023,1,-,1.500.000 ,-,Upgrades,-,-,-,-,1.500.000 
+Pedaço de Tecido,10/11/2023,1,-,2.300.000 ,-,Upgrades,-,-,-,-,2.300.000 
+Pedaço de Tecido+,11/11/2023,1,-,2.000.000 ,-,Upgrades,-,-,-,-,2.000.000 
+Pele de Pé de Urso,12/11/2023,1,-,750.000 ,-,Upgrades,-,-,-,-,750.000 
+Pele de Pé de Urso+,13/11/2023,1,-,150.000 ,-,Upgrades,-,-,-,-,150.000 
+Pele de Serpente,14/11/2023,1,-,200.000 ,-,Upgrades,-,-,-,-,200.000 
+Pele de Tigre,15/11/2023,1,-,200.000 ,-,Upgrades,-,-,-,-,200.000 
+Pêlo de Lobo+,16/11/2023,1,-,150.000 ,-,Upgrades,-,-,-,-,150.000 
+Pêlo de Yeti,17/11/2023,1,-,220.000 ,-,Upgrades,-,-,-,-,220.000 
+Pêlo de Yeti+,18/11/2023,1,-,200.000 ,-,Upgrades,-,-,-,-,200.000 
+Perna de Rã,19/11/2023,1,-,1.800.000 ,-,Upgrades,-,-,-,-,1.800.000 
+Pernas de Aranha,20/11/2023,1,-,12.000.000 ,-,Upgrades,-,-,-,-,12.000.000 
+Pérola Azul,21/11/2023,1,-,400.000 ,-,Upgrades,-,-,-,-,400.000 
+Pérola Branca,22/11/2023,1,-,3.000.000 ,-,Upgrades,-,-,-,-,3.000.000 
+Pérola Vermelha,23/11/2023,1,-,200.000 ,-,Upgrades,-,-,-,-,200.000 
+Porcelana Partida,24/11/2023,1,-,100.000 ,-,Upgrades,-,-,-,-,100.000 
+Presa de Tigre,25/11/2023,1,-,400.000 ,-,Upgrades,-,-,-,-,400.000 
+Rabo de Escorpião,26/11/2023,1,-,100.000 ,-,Upgrades,-,-,-,-,100.000 
+Rabo de Escorpião+,27/11/2023,1,-,400.000 ,-,Upgrades,-,-,-,-,400.000 
+Rabo de Serpente,28/11/2023,1,-,100.000 ,-,Upgrades,-,-,-,-,100.000 
+Rabo de Serpente+,29/11/2023,1,-,900.000 ,-,Upgrades,-,-,-,-,900.000 
+Remédio Desconhecido,30/11/2023,1,-,0 ,-,Upgrades,-,-,-,-,0 
+Remédio Desconhecido+,01/12/2023,1,-,120.000 ,-,Upgrades,-,-,-,-,120.000 
+Saco Venenoso de Aranha,02/12/2023,1,-,600.000 ,-,Upgrades,-,-,-,-,600.000 
+Seiva de Planta,03/12/2023,1,-,0 ,-,Upgrades,-,-,-,-,0 
+Sementes Mágicas,04/12/2023,1,-,4.000.000 ,-,Upgrades,-,-,-,-,4.000.000 
+Shiriken,05/12/2023,1,-,150.000 ,-,Upgrades,-,-,-,-,150.000 
+Shiriken+,06/12/2023,1,-,25.000.000 ,-,Upgrades,-,-,-,-,25.000.000 
+Símbolo do Guerreiro,07/12/2023,1,-,1.000.000 ,-,Upgrades,-,-,-,-,1.000.000 
+Talismã Desconhecido,08/12/2023,1,-,150.000 ,-,Upgrades,-,-,-,-,150.000 
+Talismã Desconhecido+,09/12/2023,1,-,250.000 ,-,Upgrades,-,-,-,-,250.000 
+Teia de Aranha,10/12/2023,1,-,1.500.000 ,-,Upgrades,-,-,-,-,1.500.000 
+Uniforme Preto,11/12/2023,1,-,200.000 ,-,Upgrades,-,-,-,-,200.000 
+Uniforme Preto+,12/12/2023,1,-,150.000 ,-,Upgrades,-,-,-,-,150.000 
+Ataque Triplo,13/12/2023,1,-,100.000 ,-,Skills,Livros,-,-,-,100.000 
+Aura da Espada,14/12/2023,1,-,9.900.000 ,-,Skills,Livros,-,-,-,9.900.000 
+Espada Rotativa,15/12/2023,1,-,250.000 ,-,Skills,Livros,-,-,-,250.000 
+Investida,16/12/2023,1,-,100.000 ,-,Skills,Livros,-,-,-,100.000 
+Raiva,17/12/2023,1,-,350.000 ,-,Skills,Livros,-,-,-,350.000 
+Força Vital,18/12/2023,1,-,500.000 ,-,Skills,Livros,-,-,-,500.000 
+Reforço Espada Rotativa,19/12/2023,1,-,3.000.000 ,-,Skills,Livros,-,-,-,3.000.000 
+Ataque do Dedo,20/12/2023,1,-,100.000 ,-,Skills,Livros,-,-,-,100.000 
+Lâmina Encantada,21/12/2023,1,-,7.500.000 ,-,Skills,Livros,-,-,-,7.500.000 
+Armadura Negra,22/12/2023,1,-,750.000 ,-,Skills,Livros,-,-,-,750.000 
+Espiral do Dragão,23/12/2023,1,-,100.000 ,-,Skills,Livros,-,-,-,100.000 
+Receio,24/12/2023,1,-,750.000 ,-,Skills,Livros,-,-,-,750.000 
+Remover Efeito,25/12/2023,1,-,100.000 ,-,Skills,Livros,-,-,-,100.000 
+Reforço Ataque do Dedo,26/12/2023,1,-,900.000 ,-,Skills,Livros,-,-,-,900.000 
+Emboscar,27/12/2023,1,-,350.000 ,-,Skills,Livros,-,-,-,350.000 
+Adaga Rotativa,28/12/2023,1,-,250.000 ,-,Skills,Livros,-,-,-,250.000 
+Nuvem Venenosa,29/12/2023,1,-,500.000 ,-,Skills,Livros,-,-,-,500.000 
+Ataque Rápido,30/12/2023,1,-,250.000 ,-,Skills,Livros,-,-,-,250.000 
+Modo Furtivo,31/12/2023,1,-,100.000 ,-,Skills,Livros,-,-,-,100.000 
+Veneno Insidioso,01/01/2024,1,-,250.000 ,-,Skills,Livros,-,-,-,250.000 
+Reforço Emboscada,02/01/2024,1,-,900.000 ,-,Skills,Livros,-,-,-,900.000 
+Talismã Voador,03/01/2024,1,-,250.000 ,-,Skills,Livros,-,-,-,250.000 
+Rugido do Dragão,04/01/2024,1,-,250.000 ,-,Skills,Livros,-,-,-,250.000 
+Poder Reflectivo,05/01/2024,1,-,250.000 ,-,Skills,Livros,-,-,-,250.000 
+Ataque do Dragão,06/01/2024,1,-,250.000 ,-,Skills,Livros,-,-,-,250.000 
+Bênção,07/01/2024,1,-,1.500.000 ,-,Skills,Livros,-,-,-,1.500.000 
+Ajuda do Dragão,08/01/2024,1,-,1.500.000 ,-,Skills,Livros,-,-,-,1.500.000 
+Reforço Ataque do Dragão,09/01/2024,1,-,-,-,Skills,Livros,-,-,-,-
+Alma do Lobo Rubro,10/01/2024,1,-,100.000 ,-,Skills,Livros,-,-,-,100.000 
+Garra do Lobo,11/01/2024,1,-,100.000 ,-,Skills,Livros,-,-,-,100.000 
+Salto do Lobo,12/01/2024,1,-,100.000 ,-,Skills,Livros,-,-,-,100.000 
+Sopro do Lobo,13/01/2024,1,-,100.000 ,-,Skills,Livros,-,-,-,100.000 
+Alma do Lobo Anil,14/01/2024,1,-,100.000 ,-,Skills,Livros,-,-,-,100.000 
+Retalho,15/01/2024,1,-,100.000 ,-,Skills,Livros,-,-,-,100.000 
+Reforço Sopro do Lobo,16/01/2024,1,-,500.000 ,-,Skills,Livros,-,-,-,500.000 
+Ataque Destrutivo,17/01/2024,1,-,100.000 ,-,Skills,Livros,-,-,-,100.000 
+Ataque de Espada,18/01/2024,1,-,100.000 ,-,Skills,Livros,-,-,-,100.000 
+Corpo Forte,19/01/2024,1,-,400.000 ,-,Skills,Livros,-,-,-,400.000 
+Força do Golpe,20/01/2024,1,-,200.000 ,-,Skills,Livros,-,-,-,200.000 
+Terramoto,21/01/2024,1,-,200.000 ,-,Skills,Livros,-,-,-,200.000 
+Orbe da Espada,22/01/2024,1,-,200.000 ,-,Skills,Livros,-,-,-,200.000 
+Reforço Atq. Espiritual,23/01/2024,1,-,900.000 ,-,Skills,Livros,-,-,-,900.000 
+Ataque Obscuro,24/01/2024,1,-,100.000 ,-,Skills,Livros,-,-,-,100.000 
+Espírito da Chama,25/01/2024,1,-,100.000 ,-,Skills,Livros,-,-,-,100.000 
+Ataque Espiritual,26/01/2024,1,-,100.000 ,-,Skills,Livros,-,-,-,100.000 
+Ataque Chama,27/01/2024,1,-,100.000 ,-,Skills,Livros,-,-,-,100.000 
+Protecção Sombria,28/01/2024,1,-,100.000 ,-,Skills,Livros,-,-,-,100.000 
+Bola da Escuridão,29/01/2024,1,-,100.000 ,-,Skills,Livros,-,-,-,100.000 
+Reforço Ataque Obscuro,30/01/2024,1,-,900.000 ,-,Skills,Livros,-,-,-,900.000 
+Tiro Duplo,31/01/2024,1,-,100.000 ,-,Skills,Livros,-,-,-,100.000 
+Seta de Fogo,01/02/2024,1,-,100.000 ,-,Skills,Livros,-,-,-,100.000 
+Seta Envenenada,02/02/2024,1,-,100.000 ,-,Skills,Livros,-,-,-,100.000 
+Chuva de Setas,03/02/2024,1,-,100.000 ,-,Skills,Livros,-,-,-,100.000 
+Flutuar,04/02/2024,1,-,100.000 ,-,Skills,Livros,-,-,-,100.000 
+Faísca,05/02/2024,1,-,100.000 ,-,Skills,Livros,-,-,-,100.000 
+Reforço Flecha de Fogo,06/02/2024,1,-,500.000 ,-,Skills,Livros,-,-,-,500.000 
+Atirar Raio,07/02/2024,1,-,200.000 ,-,Skills,Livros,-,-,-,200.000 
+Garra de Raios,08/02/2024,1,-,200.000 ,-,Skills,Livros,-,-,-,200.000 
+Rapidez,09/02/2024,1,-,250.000 ,-,Skills,Livros,-,-,-,250.000 
+Invocar Raio,10/02/2024,1,-,200.000 ,-,Skills,Livros,-,-,-,200.000 
+Curar,11/02/2024,1,-,200.000 ,-,Skills,Livros,-,-,-,200.000 
+Energia,12/02/2024,1,-,500.000 ,-,Skills,Livros,-,-,-,500.000 
+Reforço Invocar Raio,13/02/2024,1,-,-,-,Skills,Livros,-,-,-,-
+Ataque Triplo,14/02/2024,1,-,500.000 ,-,Skills,Amnésias,-,-,-,500.000 
+Aura da Espada,15/02/2024,1,-,500.000 ,-,Skills,Amnésias,-,-,-,500.000 
+Espada Rotativa,16/02/2024,1,-,500.000 ,-,Skills,Amnésias,-,-,-,500.000 
+Investida,17/02/2024,1,-,500.000 ,-,Skills,Amnésias,-,-,-,500.000 
+Raiva,18/02/2024,1,-,500.000 ,-,Skills,Amnésias,-,-,-,500.000 
+Força Vital,19/02/2024,1,-,500.000 ,-,Skills,Amnésias,-,-,-,500.000 
+Reforço Espada Rotativa,20/02/2024,1,-,500.000 ,-,Skills,Amnésias,-,-,-,500.000 
+Ataque do Dedo,21/02/2024,1,-,500.000 ,-,Skills,Amnésias,-,-,-,500.000 
+Lâmina Encantada,22/02/2024,1,-,500.000 ,-,Skills,Amnésias,-,-,-,500.000 
+Armadura Negra,23/02/2024,1,-,1.100.000 ,-,Skills,Amnésias,-,-,-,1.100.000 
+Espiral do Dragão,24/02/2024,1,-,500.000 ,-,Skills,Amnésias,-,-,-,500.000 
+Receio,25/02/2024,1,-,1.100.000 ,-,Skills,Amnésias,-,-,-,1.100.000 
+Remover Efeito,26/02/2024,1,-,500.000 ,-,Skills,Amnésias,-,-,-,500.000 
+Reforço Ataque do Dedo,27/02/2024,1,-,500.000 ,-,Skills,Amnésias,-,-,-,500.000 
+Emboscar,28/02/2024,1,-,500.000 ,-,Skills,Amnésias,-,-,-,500.000 
+Adaga Rotativa,29/02/2024,1,-,500.000 ,-,Skills,Amnésias,-,-,-,500.000 
+Nuvem Venenosa,01/03/2024,1,-,500.000 ,-,Skills,Amnésias,-,-,-,500.000 
+Ataque Rápido,02/03/2024,1,-,500.000 ,-,Skills,Amnésias,-,-,-,500.000 
+Modo Furtivo,03/03/2024,1,-,500.000 ,-,Skills,Amnésias,-,-,-,500.000 
+Veneno Insidioso,04/03/2024,1,-,500.000 ,-,Skills,Amnésias,-,-,-,500.000 
+Reforço Emboscada,05/03/2024,1,-,500.000 ,-,Skills,Amnésias,-,-,-,500.000 
+Talismã Voador,06/03/2024,1,-,500.000 ,-,Skills,Amnésias,-,-,-,500.000 
+Rugido do Dragão,07/03/2024,1,-,500.000 ,-,Skills,Amnésias,-,-,-,500.000 
+Poder Reflectivo,08/03/2024,1,-,500.000 ,-,Skills,Amnésias,-,-,-,500.000 
+Ataque do Dragão,09/03/2024,1,-,500.000 ,-,Skills,Amnésias,-,-,-,500.000 
+Bênção,10/03/2024,1,-,500.000 ,-,Skills,Amnésias,-,-,-,500.000 
+Ajuda do Dragão,11/03/2024,1,-,500.000 ,-,Skills,Amnésias,-,-,-,500.000 
+Reforço Ataque do Dragão,12/03/2024,1,-,500.000 ,-,Skills,Amnésias,-,-,-,500.000 
+Alma do Lobo Rubro,13/03/2024,1,-,500.000 ,-,Skills,Amnésias,-,-,-,500.000 
+Garra do Lobo,14/03/2024,1,-,500.000 ,-,Skills,Amnésias,-,-,-,500.000 
+Salto do Lobo,15/03/2024,1,-,500.000 ,-,Skills,Amnésias,-,-,-,500.000 
+Sopro do Lobo,16/03/2024,1,-,500.000 ,-,Skills,Amnésias,-,-,-,500.000 
+Alma do Lobo Anil,17/03/2024,1,-,500.000 ,-,Skills,Amnésias,-,-,-,500.000 
+Retalho,18/03/2024,1,-,500.000 ,-,Skills,Amnésias,-,-,-,500.000 
+Reforço Sopro do Lobo,19/03/2024,1,-,500.000 ,-,Skills,Amnésias,-,-,-,500.000 
+Ataque Destrutivo,20/03/2024,1,-,500.000 ,-,Skills,Amnésias,-,-,-,500.000 
+Ataque de Espada,21/03/2024,1,-,500.000 ,-,Skills,Amnésias,-,-,-,500.000 
+Corpo Forte,22/03/2024,1,-,500.000 ,-,Skills,Amnésias,-,-,-,500.000 
+Força do Golpe,23/03/2024,1,-,500.000 ,-,Skills,Amnésias,-,-,-,500.000 
+Terramoto,24/03/2024,1,-,500.000 ,-,Skills,Amnésias,-,-,-,500.000 
+Orbe da Espada,25/03/2024,1,-,500.000 ,-,Skills,Amnésias,-,-,-,500.000 
+Reforço Atq. Espiritual,26/03/2024,1,-,500.000 ,-,Skills,Amnésias,-,-,-,500.000 
+Ataque Obscuro,27/03/2024,1,-,500.000 ,-,Skills,Amnésias,-,-,-,500.000 
+Espírito da Chama,28/03/2024,1,-,500.000 ,-,Skills,Amnésias,-,-,-,500.000 
+Ataque Espiritual,29/03/2024,1,-,500.000 ,-,Skills,Amnésias,-,-,-,500.000 
+Ataque Chama,30/03/2024,1,-,500.000 ,-,Skills,Amnésias,-,-,-,500.000 
+Protecção Sombria,31/03/2024,1,-,500.000 ,-,Skills,Amnésias,-,-,-,500.000 
+Bola da Escuridão,01/04/2024,1,-,500.000 ,-,Skills,Amnésias,-,-,-,500.000 
+Reforço Ataque Obscuro,02/04/2024,1,-,500.000 ,-,Skills,Amnésias,-,-,-,500.000 
+Tiro Duplo,03/04/2024,1,-,500.000 ,-,Skills,Amnésias,-,-,-,500.000 
+Seta de Fogo,04/04/2024,1,-,500.000 ,-,Skills,Amnésias,-,-,-,500.000 
+Seta Envenenada,05/04/2024,1,-,500.000 ,-,Skills,Amnésias,-,-,-,500.000 
+Chuva de Setas,06/04/2024,1,-,500.000 ,-,Skills,Amnésias,-,-,-,500.000 
+Flutuar,07/04/2024,1,-,500.000 ,-,Skills,Amnésias,-,-,-,500.000 
+Faísca,08/04/2024,1,-,500.000 ,-,Skills,Amnésias,-,-,-,500.000 
+Reforço Flecha de Fogo,09/04/2024,1,-,500.000 ,-,Skills,Amnésias,-,-,-,500.000 
+Atirar Raio,10/04/2024,1,-,500.000 ,-,Skills,Amnésias,-,-,-,500.000 
+Garra de Raios,11/04/2024,1,-,500.000 ,-,Skills,Amnésias,-,-,-,500.000 
+Rapidez,12/04/2024,1,-,500.000 ,-,Skills,Amnésias,-,-,-,500.000 
+Invocar Raio,13/04/2024,1,-,500.000 ,-,Skills,Amnésias,-,-,-,500.000 
+Curar,14/04/2024,1,-,500.000 ,-,Skills,Amnésias,-,-,-,500.000 
+Energia,15/04/2024,1,-,500.000 ,-,Skills,Amnésias,-,-,-,500.000 
+Reforço Invocar Raio,16/04/2024,1,-,500.000 ,-,Skills,Amnésias,-,-,-,500.000 
+Mestria do Combo,17/04/2024,1,-,250.000 ,,Skills,Livros,-,-,-,250.000 
+Livro do Combo Mestre,18/04/2024,1,-,250.000 ,,Skills,Livros,-,-,-,250.000 
+Arte do Combo,19/04/2024,1,-,250.000 ,,Skills,Livros,-,-,-,250.000 
+Livro da Forma (1),20/04/2024,1,-,850.000 ,,Skills,Livros,-,-,-,850.000 
+Livro da Mutação (2),21/04/2024,1,-,400.000 ,,Skills,Livros,-,-,-,400.000 
+Livro do Polimorfismo (3),22/04/2024,1,-,555.000 ,,Skills,Livros,-,-,-,555.000 
+Arte da Guerra Sun-Zi,23/04/2024,1,-,1.500.000 ,,Skills,Livros,-,-,-,1.500.000 
+Arte da Guerra Wu-Zi,24/04/2024,1,-,500.000 ,,Skills,Livros,-,-,-,500.000 
+Arte da Guerra WeiLao-Zi,25/04/2024,1,-,450.000 ,,Skills,Livros,-,-,-,450.000 
+Livro de Garimpar,26/04/2024,1,-,1.400.000 ,,Skills,Livros,-,-,-,1.400.000 
+Livro Arte de Equitação,27/04/2024,1,-,-,,Skills,Livros,-,-,-,-
+Manual d'Amestrar Cavalo,28/04/2024,1,-,-,,Skills,Livros,-,-,-,-
+Arte da Língua Chunjo,29/04/2024,1,-,200.000 ,,Skills,Livros,-,-,-,200.000 
+Arte da Língua Jinno,30/04/2024,1,-,200.000 ,,Skills,Livros,-,-,-,200.000 
+Arte da Língua Shinsoo,01/05/2024,1,-,200.000 ,,Skills,Livros,-,-,-,200.000 
+Pedras +0+1+2+3,02/05/2024,1,-,200.000 ,-,-,-,-,-,-,200.000 
+Pedra anti-monstros +4,03/05/2024,1,-,-,-,-,-,-,-,-,-
+Pedra Golpe Mortal +4,04/05/2024,1,-,-,-,-,-,-,-,-,-
+Pedra da Penetração +4,05/05/2024,1,-,-,-,-,-,-,-,-,-
+Pedra da Evasão +4,06/05/2024,1,-,-,-,-,-,-,-,-,-
+Pedra da Agilidade +4,07/05/2024,1,-,-,-,-,-,-,-,-,-
+Pedra da Pressa +4,08/05/2024,1,-,-,-,-,-,-,-,-,-
+Pedra Anti-war/sura etc,09/05/2024,1,-,-,-,-,-,-,-,-,-

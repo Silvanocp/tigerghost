@@ -124,34 +124,82 @@
         
         <div id="edit-area" style="display: none;">
             <form id="edit-form">
-                <div class="form-group">
-                    <label for="item-name" class="label-item-name">Nome do Item:</label>
-                    <input type="text" id="item-name" class="input-item-name" required><br>
+                <div class="form-containeredit">
+                    <!-- Coluna Esquerda -->
+                    <div class="form-left">
+                        <!-- Preço: 4 inputs -->
+                        <div class="form-group">
+                            <input type="text" id="item-won" class="input-item-won" oninput="formatInput(this)" placeholder="0" required><br>
+                        </div>
+            
+                        <div class="form-group">
+                            <input type="text" id="item-yang" class="input-item-yang" maxlength="22" oninput="formatInput(this)" placeholder="0" required><br>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" id="item-won2" class="input-item-won" oninput="formatInput(this)" placeholder="0" required><br>
+                        </div>
+            
+                        <div class="form-group">
+                            <input type="text" id="item-yang2" class="input-item-yang" maxlength="22" oninput="formatInput(this)" placeholder="0" required><br>
+                        </div>
+            
+                        <div class="form-group">
+                            <input type="number" id="item-quantity" class="input-item-quantity" required><br>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" id="item-nivel" class="input-item-level" required><br>
+                        </div>
+            
+                        <div class="form-group">
+                            <input type="number" id="item-niveldoitem" class="input-item-level-item" required><br>
+                        </div>
+            
+                    </div>
+            
+                    <!-- Coluna Direita -->
+                    <div class="form-right">
+                        <!-- Item: 3 inputs -->
+                        <div class="form-group">
+                            <input type="text" id="item-name" class="input-item-name" required><br>
+                        </div>
+            
+                        <div class="form-group">
+                            <select class="choice-select" id="item-classe" required>
+                                <option value="--">--</option> <!-- Alterado para "null" -->
+                                <option value="Guerreiro">Guerreiro</option>
+                                <option value="Ninja">Ninja</option>
+                                <option value="Sura">Sura</option>
+                                <option value="Shaman">Shaman</option>
+                                <option value="Lycan">Lycan</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select class="choice-select" id="item-item">
+                                <option value="null">--</option> <!-- Alterado para "null" -->
+                                <!-- Opções preenchidas via JavaScript -->
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select class="choice-select" id="item-itemtype">
+                                <option value="null">--</option> <!-- Alterado para "null" -->
+                                <!-- Opções preenchidas via JavaScript -->
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="item-date" class="input-item-date" readonly><br>
+                        </div>
+                    </div>
                 </div>
-        
-                <div class="form-group">
-                    <label for="item-date" class="label-item-date">Data:</label>
-                    <input type="text" id="item-date" class="input-item-date" readonly><br>
+            
+                <!-- Botões -->
+                <div class="form-buttons">
+                    <button type="submit" class="left-buttonedit">✓</button>
+                    <button type="button" id="cancel-edit" class="right-button">Cancelar</button>
                 </div>
-        
-                <div class="form-group">
-                    <label for="item-quantity" class="label-item-quantity">Quantidade:</label>
-                    <input type="number" id="item-quantity" class="input-item-quantity" required><br>
-                </div>
-        
-                <div class="form-group">
-                    <label for="item-won" class="label-item-won">Won:</label>
-                    <input type="number" id="item-won" class="input-item-won" required><br>
-                </div>
-        
-                <div class="form-group">
-                    <label for="item-yang" class="label-item-yang">Yang:</label>
-                    <input type="number" id="item-yang" class="input-item-yang" required><br>
-                </div>
-        
-                <button type="submit" class="btn-save">Salvar</button>
-                <button type="button" id="cancel-edit" class="btn-cancel">Cancelar</button>
             </form>
+            
+        </div>
         </div>
     </div>
 
@@ -235,7 +283,7 @@
             'Alquimia': ['Diamante', 'Rubi', 'Jade', 'Safira', 'Granada', 'Ónix', 'Ametista', 'Outras'],
             'Disfarces': ['Disfarce 1', 'Disfarce 2'],
             'Poções': ['Adaga Curta', 'Adaga de Ouro'],
-            'Skills': ['Skill 1', 'Skill 2'],
+            'Skills': ['Livros', 'Amnésias'],
             'Itens Especiais': ['Item Especial 1'],
             'Outros': ['Outro 1', 'Outro 2'],
         };
@@ -296,7 +344,7 @@
                 '2': 'Ninja',
                 '3': 'Sura',
                 '4': 'Shaman',
-                '5': 'Lican'
+                '5': 'Lycan'
             };
 
             // Tratamento para quando a seleção for "--" ou "null"
@@ -460,6 +508,11 @@
 
             tableBody.innerHTML = ''; // Limpa a tabela existente
 
+            // Cria o elemento do tooltip
+            const tooltip = document.createElement('div');
+            tooltip.classList.add('custom-tooltip');
+            document.body.appendChild(tooltip); // Adiciona o tooltip ao body
+
             function renderTable(page) {
                 tableBody.innerHTML = ''; // Limpa o corpo da tabela
                 const startIndex = (page - 1) * itemsPerPage;
@@ -476,6 +529,38 @@
                         const td = document.createElement('td');
                         td.textContent = cell === 'NaN' ? '-' : cell; // Substitui 'NaN' por '-'
                         row.appendChild(td);
+                    });
+
+                    const hiddenColumns = [ item[5], item[6], item[7], item[8], item[9], item[10], item[11]]; // won2 e yang2
+                    hiddenColumns.forEach(hiddenCell => {
+                        const td = document.createElement('td');
+                        td.textContent = hiddenCell === 'NaN' ? '-' : hiddenCell; // Substitui 'NaN' por '-'
+                        td.style.display = 'none'; // Oculta a coluna
+                        row.appendChild(td);
+                    });
+
+                    // Informações extras para o tooltip (por exemplo, Yang, ItemType)
+                    const tooltipInfo = `<ul class="tooltip-list">
+                                            <div class="color-ti">Preços</div>
+                                            <li><strong>${item[3]}</strong><span class="color-w">w</span>&nbsp;&nbsp;${item[4]}<span class="color-yang">yang</span></strong></li>
+                                            <li>~</li>
+                                            <li><strong>${item[10]}</strong><span class="color-w">w</span>&nbsp;&nbsp;${item[11]}<span class="color-yang">yang</span></strong></li>
+                                        </ul>`;
+
+                    // Eventos para mostrar e ocultar o tooltip
+                    row.addEventListener('mouseenter', function (e) {
+                        tooltip.innerHTML = tooltipInfo; // Define o conteúdo do tooltip
+                        tooltip.style.display = 'block'; // Mostra o tooltip
+                    });
+
+                    row.addEventListener('mousemove', function (e) {
+                        // Posiciona o tooltip perto do cursor
+                        tooltip.style.left = `${e.pageX + 10}px`; // Posição X
+                        tooltip.style.top = `${e.pageY + 10}px`; // Posição Y
+                    });
+
+                    row.addEventListener('mouseleave', function () {
+                        tooltip.style.display = 'none'; // Esconde o tooltip
                     });
 
                     // Adiciona evento de clique na linha
@@ -503,14 +588,24 @@
                 const pagination = document.querySelector('.pagination');
                 pagination.innerHTML = '';
 
+                const visiblePages = 5; // Quantidade de páginas visíveis de cada vez
+                let startPage = Math.max(currentPage - Math.floor(visiblePages / 2), 1);
+                let endPage = Math.min(startPage + visiblePages - 1, totalPages);
+
+                // Ajustar se a última página visível for menor que 5 páginas
+                if (endPage - startPage < visiblePages - 1) {
+                    startPage = Math.max(endPage - visiblePages + 1, 1);
+                }
+
                 // Botão da primeira página
                 if (currentPage > 1) {
                     const firstButton = document.createElement('button');
-                    firstButton.classList.add('pagination-button', 'first-page'); // Classes CSS
+                    firstButton.classList.add('pagination-button', 'first-page');
                     firstButton.textContent = ''; // Imagem como fundo
                     firstButton.addEventListener('click', () => {
                         currentPage = 1;
                         renderTable(currentPage);
+                        updatePagination();
                     });
                     pagination.appendChild(firstButton);
                 }
@@ -518,26 +613,28 @@
                 // Botão da página anterior
                 if (currentPage > 1) {
                     const prevButton = document.createElement('button');
-                    prevButton.classList.add('pagination-button', 'prev-page'); // Classes CSS
+                    prevButton.classList.add('pagination-button', 'prev-page');
                     prevButton.textContent = ''; // Imagem como fundo
                     prevButton.addEventListener('click', () => {
                         currentPage--;
                         renderTable(currentPage);
+                        updatePagination();
                     });
                     pagination.appendChild(prevButton);
                 }
 
-                // Botões de páginas
-                for (let i = 1; i <= totalPages; i++) {
+                // Botões de páginas visíveis
+                for (let i = startPage; i <= endPage; i++) {
                     const pageButton = document.createElement('button');
-                    pageButton.classList.add('pagination-button', 'page-number'); // Classes CSS
-                    pageButton.textContent = i; // Adiciona o número da página
+                    pageButton.classList.add('pagination-button', 'page-number');
+                    pageButton.textContent = i;
                     if (i === currentPage) {
-                        pageButton.classList.add('current-page'); // Aplica o estilo para a página atual
+                        pageButton.classList.add('current-page');
                     }
                     pageButton.addEventListener('click', () => {
                         currentPage = i;
                         renderTable(currentPage);
+                        updatePagination();
                     });
                     pagination.appendChild(pageButton);
                 }
@@ -545,11 +642,12 @@
                 // Botão da página seguinte
                 if (currentPage < totalPages) {
                     const nextButton = document.createElement('button');
-                    nextButton.classList.add('pagination-button', 'next-page'); // Classes CSS
+                    nextButton.classList.add('pagination-button', 'next-page');
                     nextButton.textContent = ''; // Imagem como fundo
                     nextButton.addEventListener('click', () => {
                         currentPage++;
                         renderTable(currentPage);
+                        updatePagination();
                     });
                     pagination.appendChild(nextButton);
                 }
@@ -557,19 +655,21 @@
                 // Botão da última página
                 if (currentPage < totalPages) {
                     const lastButton = document.createElement('button');
-                    lastButton.classList.add('pagination-button', 'last-page'); // Classes CSS
+                    lastButton.classList.add('pagination-button', 'last-page');
                     lastButton.textContent = ''; // Imagem como fundo
                     lastButton.addEventListener('click', () => {
                         currentPage = totalPages;
                         renderTable(currentPage);
+                        updatePagination();
                     });
                     pagination.appendChild(lastButton);
                 }
             }
 
-            // Renderiza a primeira página
+            // Inicializar a tabela e paginação
             renderTable(currentPage);
-        }
+            updatePagination();
+                    }
 
         fetchCSV();
 
@@ -584,10 +684,23 @@
                 
                 // Preenche o formulário de edição com os dados da linha selecionada
                 document.getElementById('item-name').value = cells[0].textContent;
-                document.getElementById('item-date').value = cells[1].textContent;
+                // Configurar a data atual e torná-la apenas leitura
+                const today = new Date();
+                const day = String(today.getDate()).padStart(2, '0');
+                const month = String(today.getMonth() + 1).padStart(2, '0'); // Mês começa em 0
+                const year = today.getFullYear();
+                const formattedDate = `${day}/${month}/${year}`;
+                document.getElementById('item-date').value = formattedDate; // Definir a data atual
                 document.getElementById('item-quantity').value = cells[2].textContent;
-                document.getElementById('item-won').value = cells[3].textContent;
-                document.getElementById('item-yang').value = cells[4].textContent;
+                document.getElementById('item-won').value = cells[3].textContent; // Won
+                document.getElementById('item-yang').value = cells[4].textContent; // Yang
+                document.getElementById('item-classe').value = cells[5].textContent; // Classe
+                document.getElementById('item-item').value = cells[6].textContent; // Item
+                document.getElementById('item-itemtype').value = cells[7].textContent; // ItemType
+                document.getElementById('item-nivel').value = cells[8].textContent; // Nível
+                document.getElementById('item-niveldoitem').value = cells[9].textContent; // Nível do Item
+                document.getElementById('item-won2').value = cells[10].textContent; // Won2
+                document.getElementById('item-yang2').value = cells[11].textContent; // Yang2
 
                 // Mostrar a área de edição
                 document.getElementById('edit-area').style.display = 'block'; 
@@ -608,11 +721,18 @@
                 const cells = selectedRow.querySelectorAll('td');
                 
                 // Atualizar os dados na linha selecionada diretamente
-                cells[0].textContent = document.getElementById('item-name').value;
-                cells[1].textContent = document.getElementById('item-date').value;
-                cells[2].textContent = document.getElementById('item-quantity').value;
-                cells[3].textContent = document.getElementById('item-won').value;
-                cells[4].textContent = document.getElementById('item-yang').value;
+                cells[0].textContent = document.getElementById('item-name').value; // Nome do Item
+                cells[1].textContent = document.getElementById('item-date').value; // Data
+                cells[2].textContent = document.getElementById('item-quantity').value; // Quantidade
+                cells[3].textContent = document.getElementById('item-won').value; // Won
+                cells[4].textContent = document.getElementById('item-yang').value; // Yang
+                cells[5].textContent = document.getElementById('item-classe').value; // Classe
+                cells[6].textContent = document.getElementById('item-item').value; // Item
+                cells[7].textContent = document.getElementById('item-itemtype').value; // ItemType
+                cells[8].textContent = document.getElementById('item-nivel').value; // Nível
+                cells[9].textContent = document.getElementById('item-niveldoitem').value; // Nível do Item
+                cells[10].textContent = document.getElementById('item-won2').value; // Won2
+                cells[11].textContent = document.getElementById('item-yang2').value; // Yang2
 
                 console.log('Alterações salvas:', {
                     name: cells[0].textContent,
@@ -620,6 +740,13 @@
                     quantity: cells[2].textContent,
                     won: cells[3].textContent,
                     yang: cells[4].textContent,
+                    classe: cells[5].textContent,
+                    item: cells[6].textContent,
+                    itemtype: cells[7].textContent,
+                    nivel: cells[8].textContent,
+                    niveldoitem: cells[9].textContent,
+                    won2: cells[10].textContent,
+                    yang2: cells[11].textContent,
                 });
 
                 // Ocultar a área de edição após salvar
